@@ -1,0 +1,104 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="Site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="SasiSite.css" rel="Stylesheet" type="text/css" />
+    <script src="Scripts/jquery-1.4.1.min.js" type="text/javascript"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script type="text/javascript">
+        function toggletoolbar() {
+            jQuery('document').ready(function () {
+                if (jQuery('#toolbar').is(':hidden')) {
+                    jQuery('#toolbar').show();
+                    alert('in hidden');
+                }
+                else {
+                    jQuery('#toolbar').hide();
+                }
+
+            });
+        }
+    
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="menu" >
+        <table class="menutable">
+        <tr>
+        <td>
+        <asp:Menu runat="server" ID="siteMenu" DataSourceID="SiteMapDataSource1">
+        </asp:Menu>
+        <asp:SiteMapDataSource ID="SiteMapDataSource1"  runat="server" />
+        </td>
+        <td id="toggletoolbarbutton">
+         <input type="image" src="Images/toolbar/disclosureTriangleSmallDownBlack.png" onclick="javascript:toggletoolbar();" />
+        </td>
+        </tr>
+        </table>
+   
+    </div>
+    <div id="toolbar" class="toolbar" runat="server" enableviewstate="true" >
+    <table class="toolbartable">
+    <tr>
+    <td >
+      <asp:Menu ID="mnutoolbar" runat="server" CssClass="mnutoolbar" 
+            Orientation="Horizontal" RenderingMode="Table">
+            <Items>
+                <asp:MenuItem Text="" ToolTip="Search" Value="Search" ImageUrl="~/Images/toolbar/search_16.gif"
+                    SeparatorImageUrl="~/Images/toolbar/toolbar_separator_verticle.gif"></asp:MenuItem>
+                <asp:MenuItem Text="" ToolTip="Save" Value="Save" ImageUrl="~/images/toolbar/save_16.gif">
+                </asp:MenuItem>
+                <asp:MenuItem Text="" ToolTip="Cancel" Value="Cancel" ImageUrl="~/images/toolbar/stop_16.gif"
+                    SeparatorImageUrl="~/images/toolbar/toolbar_separator_verticle.gif"></asp:MenuItem>
+                <asp:MenuItem Text="" ToolTip="New" Value="New" ImageUrl="~/images/toolbar/new_document_16.gif">
+                </asp:MenuItem>
+                <asp:MenuItem Text="" ToolTip="Modify" Value="Modify" ImageUrl="~/images/toolbar/move_to_folder_16.gif">
+                </asp:MenuItem>
+                <asp:MenuItem Text="" ToolTip="Delete" Value="Delete" ImageUrl="~/images/toolbar/delete_x_16.gif"
+                    SeparatorImageUrl="~/Images/toolbar/toolbar_separator_verticle.gif"></asp:MenuItem>
+                <asp:MenuItem Text="" ToolTip="Release" Value="Release" ImageUrl="~/images/toolbar/properties_doc_16.gif"
+                    SeparatorImageUrl="~/images/toolbar/toolbar_separator_verticle.gif"></asp:MenuItem>
+                <asp:MenuItem Text="" ToolTip="Preview" Value="Preview" ImageUrl="~/images/toolbar/print_preview_16.gif">
+                </asp:MenuItem>
+                <asp:MenuItem Text="" ToolTip="Print" Value="Print" ImageUrl="~/images/toolbar/print_preview_16.gif">
+                </asp:MenuItem>
+            </Items>
+        </asp:Menu>
+    </td>
+    <td class="toolbartablesearchbox">
+        <asp:ContentPlaceHolder Visible="true" ID="Search" runat="server">
+        <asp:TextBox ID="MasterSearchBox" runat="server" CssClass="mastersearchbox">
+        </asp:TextBox>
+        </asp:ContentPlaceHolder>
+        Search Box:</td>
+    </tr>
+    </table>
+      
+    
+    </div>
+    <div class="content">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <div class="clear"></div>
+    <footer>
+     <table>
+     <tr>
+     <td>
+     </td>
+     <td>
+      © Sasi Technology
+     </td>
+     <td id="footerstatus">
+     </td>
+     </tr>
+     </table>
+       
+    </footer>
+    </form>
+</body>
+</html>

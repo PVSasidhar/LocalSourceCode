@@ -1,0 +1,155 @@
+﻿body
+{
+	width:98%;
+	 height:100%;
+	font-size:medium;
+	font-family:Arial,Wingdings 2
+}
+.menu
+{
+	width: 100%;
+	height: 10%;
+	border-bottom: 0.1em;
+	border-bottom-style: solid;
+	background-color:Yellow;
+}
+.toolbar
+{
+	width:100%;
+	height:10%;
+	border-bottom: 0.1em;
+	border-bottom-style: solid;
+	background-color:Transparent;
+}
+.mnutoolbar
+{
+	display:inline;
+}
+.menutable  
+{
+	width:100%;
+	height:100%;
+}
+.menutable table td
+{
+	width:90%;
+}
+.menutable  #toggletoolbarbutton
+{
+	width:20%;
+	text-align:right;
+}
+
+.content
+{
+	 padding: 4px;
+	 margin:2;
+	 width:100%;
+	 height:70%;
+	 display:block;
+	 min-height:500px;
+
+}
+.mastersearchbox
+{
+	width:100px; 
+	float:right;
+}
+.clear
+{
+	clear:both;
+	float:none;
+}
+.footer
+{
+	text-align: center;
+	line-height: normal;
+	width: 98%;
+	border-top-style: solid;
+	border-top: 0.1em;
+	border-bottom-style: solid;
+	border-bottom: 0.1em;
+	background-color:Gray;
+	position:fixed;
+    bottom:0;
+}
+footer
+{
+	text-align: center;
+	line-height: normal;
+	width: 98%;
+	border-top-style: solid;
+	border-top: 0.1em solid;
+	border-bottom-style: solid;
+	border-bottom: 0.1em solid;
+	background-color: Yellow;
+	position: fixed;
+	bottom: 0;
+}
+footer table
+{
+	border:1;
+	width:100%;
+}
+footer table tr
+{
+	width:100%;
+}
+footer table td
+{
+	width:33.33%;
+	vertical-align:middle;
+}
+footer #footerstatus
+{
+	text-align:right;
+}
+.toolbartable
+{
+	border: thick;
+	width: 100%;
+	height: 100%;
+}
+.toolbartable.tr
+{
+	height:100%;
+	width:100%;	
+}
+.toolbartable.td
+{
+	height:100%;
+	width:50%;	
+}
+.toolbartablesearchbox
+{
+text-align:right;
+}
+.logintable
+{
+	border-style: solid;
+	border-width: 1px;
+	border-color: inherit;
+	width: 100%;
+	height: 100%;
+}
+.logintable tr
+{
+	height:33.33%;
+	width:100%;
+}
+.logintable td
+{
+	height:100%;
+	width:33.33%;
+}
+
+td#logindialoguboxtd
+{
+    vertical-align:text-top;
+}
+tr#logindialoguboxtd
+{
+    vertical-align:text-top;
+    height:33.33%;
+	width:100%;
+}

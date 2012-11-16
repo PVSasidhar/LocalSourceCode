@@ -1,0 +1,15 @@
+﻿body 
+{
+	font-size:large;
+	font-family:Calibri;
+}
+div
+{
+	border-style:none;
+	padding: 0.1ex;
+	margin: 0.1ex;
+	display: block;
+	background: #CCFF33;
+	font-size: 80%;
+	clear: both;
+}

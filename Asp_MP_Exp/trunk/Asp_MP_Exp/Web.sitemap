@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<siteMap>
+  <siteMapNode title="Home" url="/aspnet/w3home.aspx">
+    <siteMapNode title="Services" url="/aspnet/w3services.aspx">
+      <siteMapNode title="Training" url="/aspnet/w3training.aspx"/>
+      <siteMapNode title="Support" url="/aspnet/w3support.aspx"/>
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

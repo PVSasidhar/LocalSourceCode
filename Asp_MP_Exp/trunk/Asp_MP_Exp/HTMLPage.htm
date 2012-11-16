@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>My HTM5 with Jquery</title>
+    <meta content="text/html" http-equiv="Content-type" />
+    <script src="Scripts/jquery-1.4.1.min.js" type="text/javascript"></script>
+    <link href="html5.css" type="text/css" rel="Stylesheet" />
+<script type="text/javascript">
+    jQuery('document').ready(function () {
+        jQuery('div')
+            .hide()
+            .text('Sasi peee please  x')
+            .show();
+        jQuery('div').hide().attr('style', 'width:50%;height:10%;').show();
+    }
+     );
+    function  animatess() {
+        for (var i = 0; i < 6; i++) {
+            if (i % 2 == 0) {
+                jQuery('div').animate({ opacity: 'toggle', height: 'toggle' });
+            }
+        }
+        function jsontest() {
+            alert('i am here');
+            var tst = { title: 'mr Sas is Great', body: 'It\'s a great World' };
+            alert(jQuery($).parseJSON.toString(tst));
+        }
+    }
+</script>
+</head>
+<body>
+<p> Betty bought x a bit of <em>butter</em> but it was bitter..so betty bought another bit of
+of <em>butter</em>  to make the bitter <em>butter</em>  better <em>butter</em> . </p>
+<div >taaaa taaaaaaa</div>
+<!--div>old content</div>
+<div>old content</div>
+<div>old content</div !-->
+<input type="button" value="ClickMe" onclick="jQuery('div').hide().attr('style', 'background-color:green').show();" />
+<input type="button" value="ShowAlert" onclick="javascript:alert('this page contains' + jQuery('div').length+ 'divs');" />
+<input type="button" value="Animate" onclick="javascript:jsontest();animatess();" />
+
+</body>
+
+</html>
